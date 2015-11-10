@@ -13,7 +13,10 @@
 	
 	<!-- Permissions required by this app. -->
 	<uses-permission android:name="android.permission.INTERNET"/>
-	
+	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
 	<!-- Informs the app store that this app requires OpenGL ES 2.0 as a minimum. Required by Corona. -->
 	<uses-feature android:glEsVersion="0x00020000"/>
 	
@@ -27,7 +30,7 @@
 	 The "label" attribute sets the name of the application as how it is shown to the end-user.
 	 -->
 	<application android:name="CoronaApplication"
-	             android:label="App"
+	             android:label="Appsahlic Sample Corona"
 	             android:hardwareAccelerated="true"
 	             android:debuggable="true">
 		
@@ -35,7 +38,7 @@
 		<activity android:name="com.ansca.corona.CoronaActivity"
 		          android:screenOrientation="portrait"
 		          android:configChanges="keyboard|keyboardHidden|navigation|screenSize|orientation"
-		          android:label="App"
+		          android:label="Appsaholic Sample Corona"
 		          android:launchMode="singleTask"
 		          android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
 			<intent-filter>
@@ -98,6 +101,24 @@
 				<action android:name="com.android.vending.billing.PURCHASE_STATE_CHANGED" />
 			</intent-filter>
 		</receiver>
-		
+
+        <!-- Appsaholic Rewarded Moments SDK -->
+        <activity
+            android:name="com.perk.perksdk.PerkSDKActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Holo.Light.DarkActionBar"/>
+        <activity
+            android:name="com.perk.perksdk.AdsActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait" 
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"/>
+        <activity 
+            android:name="com.facebook.ads.InterstitialAdActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            />
+	
+        <meta-data android:name="com.google.android.gms.version"
+            android:value="4242000" />
 	</application>
 </manifest>
