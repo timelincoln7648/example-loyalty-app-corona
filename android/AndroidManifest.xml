@@ -30,7 +30,7 @@
 	 The "label" attribute sets the name of the application as how it is shown to the end-user.
 	 -->
 	<application android:name="CoronaApplication"
-	             android:label="Appsahlic Sample Corona"
+	             android:label="Appsaholic Sample Corona"
 	             android:hardwareAccelerated="true"
 	             android:debuggable="true">
 		
