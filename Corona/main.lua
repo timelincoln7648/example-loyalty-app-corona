@@ -2,9 +2,9 @@
 local perk = require "plugin.perk"
 local widget = require "widget"
 
-local PERK_APP_KEY = "daee393f1b55f99f410c17259172fef9db7b2480"
-local PERK_EVENT_ID = "102baba4474a87b8075b65e8aae2473ca510b3b4"
-local PERK_AD_EVENT_ID = "dad4e9b6c976ce85c959f9b1d08f459049461b5a"
+local PERK_APP_KEY = "1c0c9ce06a92572ad1a0f185f45aa027b1d610d8"
+local PERK_EVENT_ID = "4269e64138f77445c329c4b7448ad4c3fe643562"
+local PERK_AD_EVENT_ID = "7a0fa06977e9c4e49cccb0a97fde7d905d394d1e"
 
 local displayText
 local hideNotifications = true
@@ -24,7 +24,7 @@ perk.setListener(perkListener)
 --perk.setAdServerCallbackForListeners( )
 --
 
-local defaultFontSize = 12
+local defaultFontSize = 11
 local defaultFill = {default = {0.5, 0.5, 0.5, 0.8}, over = {0.5, 0.5, 0.5, 1}}
 local defaultLabelColor = {default = {0, 0, 0, 1}, over = {0, 0, 0, 1}}
 
