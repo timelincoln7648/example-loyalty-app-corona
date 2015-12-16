@@ -1,32 +1,41 @@
-# TemplateProject
+## Synopsis
 
-> --------------------- ------------------------------------------------------------------------------------------
-> __Revision__          [REVISION_LABEL](REVISION_URL)
-> __Keywords__          iOS, Android
-> __See also__          
-> --------------------- ------------------------------------------------------------------------------------------
+This sample application demonstrates the core functionality of the **Appsaholic Rewards SDK for Android (Corona)**.  The Appsaholic Rewards SDK for Corona has been integrated in this sample application and the basic introductory function calls have been represented by example Button click events. 
 
-## Overview
+## Quickstart
 
-You should start all new Corona projects by copying this project.
+Add the Loyalty library to your module's build.gradle dependencies
 
-This project allows you to:
+`compile 'com.perk:loyalty:0.0.1@aar'`
 
-* develop cross-platform Corona Enterprise apps
-* create plugins for Corona Enterprise
+## Code Example
 
-## Code Walkthrough
+This code shows how to initialize the SDK with the *API_KEY* provided to the publisher from the Appsaholic dashboard.
 
-### iOS
+`String key = "API_KEY";`
+`PerkManager.startSession(MainActivity.this, key, localPerkListener);`
 
-#### 
-* The `AppCoronaDelegate` implements the `CoronaDelegate` protocol. In particular it implements the method `willLoadMain:` which is your opportunity to modify the Lua state prior to execution of `main.lua`. 
-* This method creates a Lua library called `myTests` and binds native functions to that library.
+In this instance, *localPerkListener* is your defined message handler for your application.
 
-### Android
+For more information on obtaining an *API_KEY*, please visit the [Appsaholic Documentation](http://docs.appsaholic.com/docs/configuring-your-android-app).
 
-* The Android "Application" class is overridden in this application so that a CoronaRuntimeListener can be set up before a Corona activity has been displayed.  This listener detects when a Corona runtime has been loaded, started, suspended, resumed, and exiting.  The listener's onLoaded() method is the application's opportunity to add its own custom Lua API to the Corona project.  See source file "CoronaApplication.java" on how to implement this.
-* Lua functions are implemented in Java by using the "com.naef.jnlua.NamedJavaFunction" interface.  All source files ending with "*LuaFunction.java" in this sample project implement this interface.  They demonstrate how to use a LuaState object to perform fundamental operations such as fetching argument values, returning values, working with tables/arrays, and calling Lua functions from Java.
-* Source file "AsyncCallLuaFunction.java" demonstrates how to safely call a Lua function from another thread.  This is important if you want to set up an asynchronous Lua function that accepts a Lua callback to be called from another thread once the asynchronous operation has ended.
-* 3rd party libraries such as InMobi and inneractive have been excluded from this project.  This reduces the size of the resulting APK file.  Attempting to use these libraries from Lua will cause an exception to be thrown which will crash the application.
+## Motivation
 
+This Sample Application has been created to jumpstart developers who are planning to integrate the **Appsaholic Rewards SDK** into their Android application. 
+ Developers can observe how the publicly available API calls and useful callbacks options interact with an application.
+
+## Installation
+
+This is a fully functional stand alone sample project, so you just need to clone the repository. Simply create an empty directory and then clone this repository as follows:
+
+`git clone https://github.com/Appsaholic/example-loyalty-app-corona.git`
+
+This sample application was built with and intended for use with Corona Enterprise.
+
+##API Reference
+
+Full documentation for the Appsaholic Rewards SDK for Android (Corona) can be found in the comprehensive [Appsaholic Documentation](http://docs.appsaholic.com/docs/android-basic-integration-guide).
+
+##Contributors
+
+For comments or suggestions, please [email us](mailto:help@appsaholic.com) or use the Intercom chat interface found in the lower-right corner at [appsaholic.com](http://www.appsaholic.com).
